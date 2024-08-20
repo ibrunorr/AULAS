@@ -11,25 +11,25 @@ int main() {
     printf("Digite a Nota 2: ");
     scanf("%f", &nota2);
 
-    printf("Digite a Frequencia (em porcentagem): ");
+    printf("Digite a Frequencia em %): ");
     scanf("%f", &frequencia);
 
     media = (nota1 + nota2) / 2;
 
     if (media >= 6 && frequencia >= 75) {
-        printf("Aluno aprovado!\n");
+        printf("Aluno aprovado.\n");
     } else if (media >= 4 && frequencia >= 60) {
-        printf("Aluno em exame...\n");
+        printf("O aluno esta em exame.\n");
         getchar(); 
         printf("Digite a nota do exame: ");
         scanf("%f", &exame);
         if ((media + exame) / 2 >= 5) { 
-            printf("Aluno aprovado por exame!\n");
+            printf("Aluno aprovado no exame!!\n");
         } else {
-            printf("Aluno reprovado!\n");
+            printf("Aluno reprovado.\n");
         }
     } else {
-        printf("Aluno reprovado!\n");
+        printf("Aluno reprovado.\n");
     }
 
     return 0;
