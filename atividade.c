@@ -1,26 +1,29 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
-int main(){
+int main() {
+    
     float nota1, nota2, media, exame, frequencia;
-    printf("digite a nota 1:");
-    scanf("%F" , &nota1);
 
-    printf("digite a nota 2");
-    scanf("%F" , &nota2);
+    printf("Digite a Nota 1: ");
+    scanf("%f", &nota1);
 
-    printf("digite a frequencia em porcentagem ");
-    scanf("%F" , &frequencia);
+    printf("Digite a Nota 2: ");
+    scanf("%f", &nota2);
 
-     media = nota1+ nota2 / 2;    
+    printf("Digite a Frequencia (em porcentagem): ");
+    scanf("%f", &frequencia);
+
+    media = (nota1 + nota2) / 2;
 
     if (media >= 6 && frequencia >= 75) {
         printf("Aluno aprovado!\n");
     } else if (media >= 4 && frequencia >= 60) {
-        printf("Aluno em exame!\n");
+        printf("Aluno em exame...\n");
+        getchar(); 
         printf("Digite a nota do exame: ");
         scanf("%f", &exame);
-        if (media + exame >= 10) {
+        if ((media + exame) / 2 >= 5) { 
             printf("Aluno aprovado por exame!\n");
         } else {
             printf("Aluno reprovado!\n");
@@ -30,5 +33,4 @@ int main(){
     }
 
     return 0;
-
 }
