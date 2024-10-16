@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main() {
+    int op;  
+    float salario, por = 0;   
+    float imposto;
+    
+    printf("\ndigite o seu salario: ");
+    scanf("%f", &salario);
+
+    if(salario <= 2112.00) {
+        printf("voce e isento");
+        
+    }
+    if(salario >= 2112.01 && salario <= 2826.65) {
+        por = 7.5;
+        imposto = (salario * por) /100;
+        printf("valor a ser pago sera %2.f", imposto);
+        
+    }
+    if(salario >=2826.66  && salario <=3751.01) {
+        por = 15;
+        imposto = (salario * por) /100;
+        printf("valor a ser pago sera %2.f", imposto);
+        
+    }
+    if(salario >=3751.06  && salario <=4664.68) {
+        por = 22.5;
+        imposto = (salario * por) /100;
+        printf("valor a ser pago sera %2.f", imposto);
+        
+    }
+    if(salario > 4664.68) {
+        por = 27.5;
+        imposto = (salario * por) /100;
+        printf("valor a ser pago sera %2.f", imposto);
+        
+    }
+    
+    
+   return 0;
+   
+}  
