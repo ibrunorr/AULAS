@@ -1,0 +1,33 @@
+int main() {
+    int escolha;
+    float area;
+
+    printf("Escolha a figura geométrica:\n");
+    printf("1. Triângulo\n");
+    printf("2. Retângulo\n");
+    printf("3. Círculo\n");
+    scanf("%d", &escolha);
+
+    if (escolha == 1) {
+        float base, altura;
+        scanf("%f %f", &base, &altura);
+        area = (base * altura) / 2;
+        
+    } else if (escolha == 2) {
+        float largura, altura;
+        scanf("%f %f", &largura, &altura);
+        area = largura * altura;
+        
+    } else if (escolha == 3) {
+        float raio;
+        scanf("%f", &raio);
+        area = 3.14 * raio * raio;
+        
+    } else {
+        printf("Escolha inválida!\n");
+        return 1;
+    }
+
+    printf("A área é: %.2f\n", area);
+    return 0;
+ }
